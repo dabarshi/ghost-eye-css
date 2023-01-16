@@ -1,15 +1,16 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
 .container {
     width: 400px;
     height: 400px;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     background-color: #242B2E;
 }
 
@@ -20,11 +21,12 @@
     position: relative;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     border-radius: 50% 50% 0 0;
 }
+
 .eyes {
-    
+
     height: 50px;
     width: 120px;
     background-color: #242B2E;
@@ -42,6 +44,7 @@
     border-radius: 50%;
     background-color: rgb(255, 255, 255);
 }
+
 .eye-right {
     height: 30px;
     width: 30px;
@@ -51,6 +54,7 @@
     border-radius: 50%;
     background-color: rgb(255, 255, 255);
 }
+
 .left-eye-ball {
     height: 10px;
     width: 10px;
@@ -59,7 +63,12 @@
     position: relative;
     top: 18px;
     left: 15px;
+    animation-name: move-eye;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
 }
+
 .right-eye-ball {
     height: 10px;
     width: 10px;
@@ -68,5 +77,46 @@
     position: relative;
     top: 18px;
     left: 15px;
+    animation-name: move-eye;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
 }
 
+@keyframes move-eye {
+    0% {
+      top: 18px;
+    }
+    15% {
+      top: 15px;
+      left: 18px;
+    }
+    30% {
+      top: 10px;
+      left: 19px;
+    }
+    45% {
+      top: 5px;
+      left: 17px;
+    }
+    50% {
+      top: 0px;
+      left: 15px;
+    }
+    55% {
+      top: 5px;
+      left: 17px;
+    }
+    70% {
+      top: 10px;
+      left: 19px;
+    }
+    85% {
+      top: 15px;
+      left: 18px;
+    }
+    100% {
+      top: 18px;
+    }
+  }
+  
